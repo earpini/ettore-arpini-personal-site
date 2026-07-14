@@ -7,8 +7,8 @@ body { margin:0; background:var(--paper); color:var(--ink); font-family:Arial, H
 a { color:inherit; }
 .shell { width:min(1180px, calc(100% - 64px)); margin:0 auto; }
 .site-header { height:104px; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; position:relative; z-index:10; }
-.wordmark { width:48px; height:48px; border:1px solid var(--ink); border-radius:50%; display:grid; place-items:center; text-decoration:none; font-weight:800; letter-spacing:-.08em; position:relative; }
-.wordmark span { position:absolute; right:-7px; top:-8px; color:var(--orange); font-size:18px; }
+.wordmark { display:inline-flex; align-items:center; gap:7px; width:max-content; text-decoration:none; font-family:Georgia, 'Times New Roman', serif; font-size:20px; font-weight:400; letter-spacing:-.035em; position:relative; }
+.wordmark span { color:var(--orange); font-family:Arial, Helvetica, sans-serif; font-size:14px; }
 nav { display:flex; gap:34px; }
 nav a,.language { font-size:11px; text-transform:uppercase; letter-spacing:.14em; text-decoration:none; font-weight:700; }
 nav a { padding:12px 0; border-bottom:1px solid transparent; } nav a:hover { border-color:var(--orange); }

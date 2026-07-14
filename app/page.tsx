@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const copy = {
   en: {
-    nav: ["Focus", "Writing", "Projects", "About"],
+    nav: ["Projects", "Writing", "Focus", "About"],
     eyebrow: "Strategy · Institutions · AI governance",
     headline: <>Making AI<br />governance <em>real.</em></>,
     intro: "I work on the strategy, coalitions, and institutions that turn evidence about advanced AI into real-world action — especially in countries outside the frontier.",
@@ -35,7 +35,7 @@ const copy = {
     footer: "São Paulo · working globally",
   },
   pt: {
-    nav: ["Foco", "Escrita", "Projetos", "Sobre"],
+    nav: ["Projetos", "Escrita", "Foco", "Sobre"],
     eyebrow: "Estratégia · Instituições · Governança de IA",
     headline: <>Tornando a governança<br />de IA <em>real.</em></>,
     intro: "Trabalho com as estratégias, coalizões e instituições que transformam evidências sobre IA avançada em ação no mundo real — especialmente em países fora da fronteira.",
@@ -79,8 +79,8 @@ export default function Home() {
   return (
     <main>
       <header className="site-header shell">
-        <a className="wordmark" href="#top" aria-label="Ettore Arpini, home">EA<span>↗</span></a>
-        <nav>{t.nav.map((item, i) => <a key={item} href={`#${["focus", "writing", "projects", "about"][i]}`}>{item}</a>)}</nav>
+        <a className="wordmark" href="#top" aria-label="Ettore Arpini, home">Ettore Arpini<span>↗</span></a>
+        <nav>{t.nav.map((item, i) => <a key={item} href={`#${["projects", "writing", "focus", "about"][i]}`}>{item}</a>)}</nav>
         <button className="language" onClick={() => setLang(lang === "en" ? "pt" : "en")} aria-label="Switch language">{lang === "en" ? "PT" : "EN"}</button>
       </header>
 
@@ -94,10 +94,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="focus dark" id="focus">
-        <div className="shell">
-          <div className="section-intro"><p className="section-number">01 / FOCUS</p><h2>{t.focusTitle}</h2><p>{t.focusBody}</p></div>
-          <div className="pillars">{t.pillars.map(([n, title, body]) => <article key={n}><span>{n}</span><h3>{title}</h3><p>{body}</p></article>)}</div>
+
+      <section className="projects" id="projects">
+        <div className="shell projects-grid"><div><p className="section-number">01 / {t.projectsLabel}</p><h2>{t.projectsTitle}</h2><p>{t.projectsBody}</p></div>
+          <div className="project-stack">
+            <a href="https://ettorearpini.com/leverage-lab/" target="_blank" rel="noreferrer" className="project-card orange"><span>01 · Browser game</span><h3>Leverage<br />Lab</h3><p>18 countries · 8 turns · 5 endings</p><b>↗</b></a>
+            <a href="https://ettorearpini.com/frontier-ai-dependency-explorer/" target="_blank" rel="noreferrer" className="project-card cream"><span>02 · Interactive dashboard</span><h3>AI Frontier<br />Dependency Explorer</h3><p>Minerals · Compute · Energy · Capital</p><b>↗</b></a>
+          </div>
         </div>
       </section>
 
@@ -113,12 +116,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="projects" id="projects">
-        <div className="shell projects-grid"><div><p className="section-number">03 / {t.projectsLabel}</p><h2>{t.projectsTitle}</h2><p>{t.projectsBody}</p></div>
-          <div className="project-stack">
-            <a href="https://ettorearpini.com/leverage-lab/" target="_blank" rel="noreferrer" className="project-card orange"><span>01 · Browser game</span><h3>Leverage<br />Lab</h3><p>18 countries · 8 turns · 5 endings</p><b>↗</b></a>
-            <a href="https://ettorearpini.com/frontier-ai-dependency-explorer/" target="_blank" rel="noreferrer" className="project-card cream"><span>02 · Interactive dashboard</span><h3>AI Frontier<br />Dependency Explorer</h3><p>Minerals · Compute · Energy · Capital</p><b>↗</b></a>
-          </div>
+      <section className="focus dark" id="focus">
+        <div className="shell">
+          <div className="section-intro"><p className="section-number">03 / FOCUS</p><h2>{t.focusTitle}</h2><p>{t.focusBody}</p></div>
+          <div className="pillars">{t.pillars.map(([n, title, body]) => <article key={n}><span>{n}</span><h3>{title}</h3><p>{body}</p></article>)}</div>
         </div>
       </section>
 

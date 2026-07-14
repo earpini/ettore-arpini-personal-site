@@ -18,7 +18,7 @@ const copy = {
     ],
     writingLabel: "Selected writing",
     writingTitle: "Where AI Lands",
-    writingBody: "Notes on work, industry, energy, climate, security, geopolitics, natural resources, and power — concrete enough that people and policymakers act.",
+    writingBody: "My Substack about where transformative AI lands in the real world — and how to talk about those impacts concretely enough that people and policymakers act.",
     read: "Read on Substack",
     workLabel: "Research & publications",
     projectsLabel: "Projects",
@@ -49,7 +49,7 @@ const copy = {
     ],
     writingLabel: "Escrita selecionada",
     writingTitle: "Where AI Lands",
-    writingBody: "Notas sobre trabalho, indústria, energia, clima, segurança, geopolítica, recursos naturais e poder — concretas o suficiente para que pessoas e formuladores de políticas ajam.",
+    writingBody: "Minha Substack sobre onde a IA transformadora aterrissa no mundo real — e como falar sobre esses impactos de forma concreta o suficiente para que pessoas e formuladores de políticas ajam.",
     read: "Ler na Substack",
     workLabel: "Pesquisa e publicações",
     projectsLabel: "Projetos",
@@ -108,7 +108,6 @@ export default function Home() {
         <div className="feature-card">
           <div><p className="section-number">02 / {t.writingLabel}</p><h2>{t.writingTitle}</h2></div>
           <div className="feature-copy"><p>{t.writingBody}</p><a className="arrow-link" href="https://arpini.substack.com" target="_blank" rel="noreferrer">{t.read} <span>↗</span></a></div>
-          <div className="landing-mark" aria-hidden="true"><span>AI</span><i /></div>
         </div>
         <div className="publication-block">
           <p className="section-number">{t.workLabel}</p>

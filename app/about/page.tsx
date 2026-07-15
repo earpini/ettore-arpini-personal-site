@@ -6,10 +6,10 @@ const content = {
   en: {
     back: "Back to home",
     label: "About",
-    title: <>From evidence<br />to <em>action.</em></>,
+    title: <>Making AI<br />governance <em>real.</em></>,
     paragraphs: [
       "I work at the intersection of AI governance, strategy, and institutional change.",
-      "Before turning to AI governance, I spent nine years at the World Resources Institute, one of the world’s leading environmental policy institutions, where I went from intern to Director of Strategy and Impact at WRI Brasil. My work was about one thing: turning research into decisions.",
+      "Before turning to AI governance, I spent nine years at the World Resources Institute, one of the world’s leading environmental policy institutions. I started as an intern and became Director of Strategy and Impact at WRI Brasil. My work was about one thing: turning research into decisions.",
       "That meant designing theories of change, strategies, and results systems that helped connect climate and environmental research to policy, coalitions, and institutional action across countries. It also meant working close to the machinery of global policy: governments, funders, CEOs, researchers, and teams trying to move from good ideas to real-world results.",
       "In 2026, I turned that experience toward AI governance. Climate taught me that evidence alone rarely changes the world. It has to be translated into strategy, institutions, coalitions, and political urgency. Advanced AI now faces a similar challenge — but with power concentrating faster than institutions are adapting.",
       "My current work focuses on how countries outside the frontier keep agency in the age of advanced AI: middle powers, multilateralism, fieldbuilding, and the practical policy work needed to make AI safer globally.",
@@ -23,10 +23,10 @@ const content = {
   pt: {
     back: "Voltar ao início",
     label: "Sobre",
-    title: <>Da evidência<br />à <em>ação.</em></>,
+    title: <>Tornando a governança<br />de IA <em>real.</em></>,
     paragraphs: [
       "Trabalho na interseção entre governança de IA, estratégia e mudança institucional.",
-      "Antes de me voltar para a governança de IA, passei nove anos no World Resources Institute, uma das principais instituições de política ambiental do mundo, onde fui de estagiário a Diretor de Estratégia e Impacto do WRI Brasil. Meu trabalho era sobre uma coisa: transformar pesquisa em decisão.",
+      "Antes de me voltar para a governança de IA, passei nove anos no World Resources Institute, uma das principais instituições de política ambiental do mundo. Comecei como estagiário e me tornei Diretor de Estratégia e Impacto do WRI Brasil. Meu trabalho era sobre uma coisa: transformar pesquisa em decisão.",
       "Isso significava desenhar teorias da mudança, estratégias e sistemas de resultados que ajudavam a conectar pesquisa climática e ambiental a políticas, coalizões e ação institucional em diversos países. Também significava trabalhar perto da engrenagem da política global: governos, financiadores, CEOs, pesquisadores e equipes tentando ir de boas ideias a resultados concretos.",
       "Em 2026, apontei essa experiência para a governança de IA. O clima me ensinou que evidência sozinha raramente muda o mundo. Ela precisa ser traduzida em estratégia, instituições, coalizões e urgência política. A IA avançada enfrenta agora um desafio parecido — mas com o poder se concentrando mais rápido do que as instituições estão se adaptando.",
       "Meu trabalho atual foca em como países fora da fronteira mantêm agência na era da IA avançada: potências médias, multilateralismo, construção de campo e o trabalho prático de políticas necessário para tornar a IA mais segura globalmente.",
@@ -45,14 +45,14 @@ const experience = {
 };
 
 const education = {
-  en: [["MSc Engineering and Policy Analysis, cum laude", "TU Delft"], ["BSc Industrial Engineering and Management", "UFRGS, Porto Alegre"]],
-  pt: [["Mestrado em Engenharia e Análise de Políticas, cum laude", "TU Delft"], ["Engenharia de Produção", "UFRGS, Porto Alegre"]],
+  en: [["MSc Engineering and Policy Analysis, cum laude · 8.5/10", "TU Delft"], ["BSc Industrial Engineering and Management · 9.7/10", "UFRGS, Porto Alegre"]],
+  pt: [["Mestrado em Engenharia e Análise de Políticas, cum laude · 8,5/10", "TU Delft"], ["Engenharia de Produção · 9,7/10", "UFRGS, Porto Alegre"]],
 };
 
 export default function AboutPage() {
   const [lang, setLang] = useState<"en" | "pt">("en");
   const t = content[lang];
-  return <main className="about-page dark">
+  return <main className="about-page">
     <header className="site-header shell">
       <a className="wordmark" href="/">Ettore Arpini<span>↗</span></a>
       <a className="back-link" href="/">← {t.back}</a>

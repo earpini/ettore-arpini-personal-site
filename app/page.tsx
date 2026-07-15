@@ -6,8 +6,8 @@ const copy = {
   en: {
     nav: ["About", "Projects", "Writing", "Contact"],
     eyebrow: "Strategy · Institutions · AI governance",
-    headline: <>Making AI<br />governance <em>real.</em></>,
-    intro: "I work on the strategy, coalitions, and institutions that turn evidence about advanced AI into real-world action — especially in countries outside the frontier.",
+    headline: <>From research<br />to <em>impact.</em></>,
+    intro: "I develop strategies, coalitions, and institutions that contribute to change in the real world. I'm currently working on helping countries prepare for advanced AI, influence global decisions, and protect their ability to shape their own futures.",
     status: "Currently co-founding",
     focusTitle: "Where transformative AI lands matters as much as where it is built.",
     focusBody: "I’m exploring how middle-power countries can turn their real assets into influence over the global AI order — and how public mobilization, strategy, and new institutions can make that agency durable.",
@@ -26,12 +26,12 @@ const copy = {
     projectsBody: "Interactive experiments for understanding the choices, dependencies, and pressure points in the global AI order.",
     aboutLabel: "About",
     aboutTitle: "I build the bridge between good ideas and real-world results.",
-    aboutBody1: "Before turning to AI governance, I spent nine years at the World Resources Institute — from intern to Director of Strategy and Impact at WRI Brasil. Across nine countries, I designed strategies, theories of change, and learning systems to connect climate research with policy, coalitions, and institutional action.",
+    aboutBody1: "Before turning to AI governance, I spent nine years at the World Resources Institute. I started as an intern and became Director of Strategy and Impact at WRI Brasil. Across nine countries, I designed strategies, theories of change, and learning systems to connect climate research with policy, coalitions, and institutional action.",
     aboutBody2: "That experience taught me that evidence alone rarely changes reality. It has to become strategy, institutions, political urgency, and a reason for people to move.",
     learnMore: "Learn more",
     aboutLong: [
       "I work at the intersection of AI governance, strategy, and institutional change.",
-      "Before turning to AI governance, I spent nine years at the World Resources Institute, one of the world’s leading environmental policy institutions, where I went from intern to Director of Strategy and Impact at WRI Brasil. My work was about one thing: turning research into decisions.",
+      "Before turning to AI governance, I spent nine years at the World Resources Institute, one of the world’s leading environmental policy institutions. I started as an intern and became Director of Strategy and Impact at WRI Brasil. My work was about one thing: turning research into decisions.",
       "That meant designing theories of change, strategies, and results systems that helped connect climate and environmental research to policy, coalitions, and institutional action across countries. It also meant working close to the machinery of global policy: governments, funders, CEOs, researchers, and teams trying to move from good ideas to real-world results.",
       "In 2026, I turned that experience toward AI governance. Climate taught me that evidence alone rarely changes the world. It has to be translated into strategy, institutions, coalitions, and political urgency. Advanced AI now faces a similar challenge — but with power concentrating faster than institutions are adapting.",
       "My current work focuses on how countries outside the frontier keep agency in the age of advanced AI: middle powers, multilateralism, fieldbuilding, and the practical policy work needed to make AI safer globally.",
@@ -53,8 +53,8 @@ const copy = {
   pt: {
     nav: ["Sobre", "Projetos", "Escrita", "Contato"],
     eyebrow: "Estratégia · Instituições · Governança de IA",
-    headline: <>Tornando a governança<br />de IA <em>real.</em></>,
-    intro: "Trabalho com as estratégias, coalizões e instituições que transformam evidências sobre IA avançada em ação no mundo real — especialmente em países fora da fronteira.",
+    headline: <>Da pesquisa<br />ao <em>impacto.</em></>,
+    intro: "Desenvolvo estratégias, coalizões e instituições que contribuem para mudanças no mundo real. Atualmente, trabalho para ajudar países a se prepararem para a IA avançada, influenciarem decisões globais e protegerem sua capacidade de moldar seus próprios futuros.",
     status: "Cofundando agora",
     focusTitle: "Onde a IA transformadora aterrissa importa tanto quanto onde ela é construída.",
     focusBody: "Estou explorando como potências médias podem transformar seus ativos reais em influência sobre a ordem global da IA — e como mobilização pública, estratégia e novas instituições podem tornar essa agência duradoura.",
@@ -73,12 +73,12 @@ const copy = {
     projectsBody: "Experimentos interativos para entender escolhas, dependências e pontos de pressão na ordem global da IA.",
     aboutLabel: "Sobre",
     aboutTitle: "Construo a ponte entre boas ideias e resultados no mundo real.",
-    aboutBody1: "Antes de me voltar para a governança de IA, passei nove anos no World Resources Institute — de estagiário a Diretor de Estratégia e Impacto do WRI Brasil. Em nove países, desenhei estratégias, teorias da mudança e sistemas de aprendizagem para conectar pesquisa climática a políticas, coalizões e ação institucional.",
+    aboutBody1: "Antes de me voltar para a governança de IA, passei nove anos no World Resources Institute. Comecei como estagiário e me tornei Diretor de Estratégia e Impacto do WRI Brasil. Em nove países, desenhei estratégias, teorias da mudança e sistemas de aprendizagem para conectar pesquisa climática a políticas, coalizões e ação institucional.",
     aboutBody2: "Essa experiência me ensinou que evidência sozinha raramente muda a realidade. Ela precisa se tornar estratégia, instituições, urgência política e uma razão para as pessoas se moverem.",
     learnMore: "Saiba mais",
     aboutLong: [
       "Trabalho na interseção entre governança de IA, estratégia e mudança institucional.",
-      "Antes de me voltar para a governança de IA, passei nove anos no World Resources Institute, uma das principais instituições de política ambiental do mundo, onde fui de estagiário a Diretor de Estratégia e Impacto do WRI Brasil. Meu trabalho era sobre uma coisa: transformar pesquisa em decisão.",
+      "Antes de me voltar para a governança de IA, passei nove anos no World Resources Institute, uma das principais instituições de política ambiental do mundo. Comecei como estagiário e me tornei Diretor de Estratégia e Impacto do WRI Brasil. Meu trabalho era sobre uma coisa: transformar pesquisa em decisão.",
       "Isso significava desenhar teorias da mudança, estratégias e sistemas de resultados que ajudavam a conectar pesquisa climática e ambiental a políticas, coalizões e ação institucional em diversos países. Também significava trabalhar perto da engrenagem da política global: governos, financiadores, CEOs, pesquisadores e equipes tentando ir de boas ideias a resultados concretos.",
       "Em 2026, apontei essa experiência para a governança de IA. O clima me ensinou que evidência sozinha raramente muda o mundo. Ela precisa ser traduzida em estratégia, instituições, coalizões e urgência política. A IA avançada enfrenta agora um desafio parecido — mas com o poder se concentrando mais rápido do que as instituições estão se adaptando.",
       "Meu trabalho atual foca em como países fora da fronteira mantêm agência na era da IA avançada: potências médias, multilateralismo, construção de campo e o trabalho prático de políticas necessário para tornar a IA mais segura globalmente.",
@@ -122,12 +122,12 @@ const experience = {
 
 const education = {
   en: [
-    ["MSc Engineering and Policy Analysis, cum laude", "TU Delft"],
-    ["BSc Industrial Engineering and Management", "UFRGS, Porto Alegre"],
+    ["MSc Engineering and Policy Analysis, cum laude · 8.5/10", "TU Delft"],
+    ["BSc Industrial Engineering and Management · 9.7/10", "UFRGS, Porto Alegre"],
   ],
   pt: [
-    ["Mestrado em Engenharia e Análise de Políticas, cum laude", "TU Delft"],
-    ["Engenharia de Produção", "UFRGS, Porto Alegre"],
+    ["Mestrado em Engenharia e Análise de Políticas, cum laude · 8,5/10", "TU Delft"],
+    ["Engenharia de Produção · 9,7/10", "UFRGS, Porto Alegre"],
   ],
 };
 
@@ -155,7 +155,7 @@ export default function Home() {
       <section className="about-story dark" id="about">
         <div className="shell">
           <div className="about-story-grid">
-            <div><p className="section-number">01 / {t.aboutLabel}</p><h2>From evidence<br />to <em>action.</em></h2></div>
+            <div><p className="section-number">01 / {t.aboutLabel}</p><h2>{lang === "en" ? <>Making AI<br />governance <em>real.</em></> : <>Tornando a governança<br />de IA <em>real.</em></>}</h2></div>
             <div className="about-story-copy compact-about">
               <p>{t.aboutBody1}</p>
               <p>{t.aboutBody2}</p>
@@ -177,8 +177,13 @@ export default function Home() {
 
       <section className="writing shell" id="writing">
         <div className="feature-card">
-          <div><p className="section-number">03 / {t.writingLabel}</p><h2>{t.writingTitle}</h2></div>
-          <div className="feature-copy"><p>{t.writingBody}</p><a className="arrow-link" href="https://arpini.substack.com" target="_blank" rel="noreferrer">{t.read} <span>↗</span></a></div>
+          <div className="publication-cover-column">
+            <p className="section-number">03 / {t.writingLabel}</p>
+            <a className="moving-cover" href="https://arpini.substack.com" target="_blank" rel="noreferrer" aria-label={`${t.writingTitle} — ${t.read}`}>
+              <span className="cover-frame"><img src="/where-ai-lands-cover.png" alt="Where AI Lands publication cover" /></span>
+            </a>
+          </div>
+          <div className="feature-copy"><h2>{t.writingTitle}</h2><p>{t.writingBody}</p><a className="arrow-link" href="https://arpini.substack.com" target="_blank" rel="noreferrer">{t.read} <span>↗</span></a></div>
         </div>
         <div className="publication-block">
           <p className="section-number">{t.workLabel}</p>

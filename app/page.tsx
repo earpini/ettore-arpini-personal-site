@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import publicationCover from "../public/where-ai-lands-cover.png";
 
 const copy = {
   en: {
@@ -180,7 +181,7 @@ export default function Home() {
           <div className="publication-cover-column">
             <p className="section-number">03 / {t.writingLabel}</p>
             <a className="moving-cover" href="https://arpini.substack.com" target="_blank" rel="noreferrer" aria-label={`${t.writingTitle} — ${t.read}`}>
-              <span className="cover-frame"><img src="./where-ai-lands-cover.png" alt="Where AI Lands publication cover" /></span>
+              <span className="cover-frame"><img src={publicationCover.src} alt="Where AI Lands publication cover" /></span>
             </a>
           </div>
           <div className="feature-copy"><h2>{t.writingTitle}</h2><p>{t.writingBody}</p><a className="arrow-link" href="https://arpini.substack.com" target="_blank" rel="noreferrer">{t.read} <span>↗</span></a></div>

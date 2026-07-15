@@ -8,7 +8,7 @@ const copy = {
     nav: ["About", "Projects", "Writing", "Contact"],
     eyebrow: "Strategy · Institutions · AI governance",
     headline: <>From research<br />to <em>impact.</em></>,
-    intro: "I develop strategies, coalitions, and institutions that contribute to change in the real world. I'm currently working on helping countries prepare for advanced AI, influence global decisions, and protect their ability to shape their own futures.",
+    intro: "I develop impact strategies, funding channels, partnerships and management systems that contribute to positive change in the real world. I'm currently working on helping countries and organizations prepare for and shape the impacts of advanced AI.",
     status: "Currently co-founding",
     focusTitle: "Where transformative AI lands matters as much as where it is built.",
     focusBody: "I’m exploring how middle-power countries can turn their real assets into influence over the global AI order — and how public mobilization, strategy, and new institutions can make that agency durable.",
@@ -28,7 +28,7 @@ const copy = {
     aboutLabel: "About",
     aboutTitle: "I build the bridge between good ideas and real-world results.",
     aboutBody1: "Before turning to AI governance, I spent nine years at the World Resources Institute. I started as an intern and became Director of Strategy and Impact at WRI Brasil. Across nine countries, I designed strategies, theories of change, and learning systems to connect climate research with policy, coalitions, and institutional action.",
-    aboutBody2: "That experience taught me that evidence alone rarely changes reality. It has to become strategy, institutions, political urgency, and a reason for people to move.",
+    aboutBody2: "That experience taught me that research and evidence alone rarely change reality. They have to “land” in the real world and mobilize the right people to inform strategies, shape institutions, and unlock funding.",
     learnMore: "Learn more",
     aboutLong: [
       "I work at the intersection of AI governance, strategy, and institutional change.",
@@ -47,15 +47,15 @@ const copy = {
     nextBody: "I’m exploring how middle-power countries can turn their real assets into influence over the global AI order — and how public mobilization, strategy, and new institutions can make that agency durable.",
     available: "Open to collaborations, advisory work, and consulting",
     contactTitle: <>If you’re working on<br />any of this, <em>let’s talk.</em></>,
+    calendar: "Book a call",
     email: "Email me",
     feedback: "Anonymous feedback",
-    footer: "São Paulo · working globally",
   },
   pt: {
     nav: ["Sobre", "Projetos", "Escrita", "Contato"],
     eyebrow: "Estratégia · Instituições · Governança de IA",
     headline: <>Da pesquisa<br />ao <em>impacto.</em></>,
-    intro: "Desenvolvo estratégias, coalizões e instituições que contribuem para mudanças no mundo real. Atualmente, trabalho para ajudar países a se prepararem para a IA avançada, influenciarem decisões globais e protegerem sua capacidade de moldar seus próprios futuros.",
+    intro: "Desenvolvo estratégias de impacto, canais de financiamento, parcerias e sistemas de gestão que contribuem para mudanças positivas no mundo real. Atualmente, trabalho para ajudar países e organizações a se prepararem para os impactos da IA avançada e a moldá-los.",
     status: "Cofundando agora",
     focusTitle: "Onde a IA transformadora aterrissa importa tanto quanto onde ela é construída.",
     focusBody: "Estou explorando como potências médias podem transformar seus ativos reais em influência sobre a ordem global da IA — e como mobilização pública, estratégia e novas instituições podem tornar essa agência duradoura.",
@@ -75,7 +75,7 @@ const copy = {
     aboutLabel: "Sobre",
     aboutTitle: "Construo a ponte entre boas ideias e resultados no mundo real.",
     aboutBody1: "Antes de me voltar para a governança de IA, passei nove anos no World Resources Institute. Comecei como estagiário e me tornei Diretor de Estratégia e Impacto do WRI Brasil. Em nove países, desenhei estratégias, teorias da mudança e sistemas de aprendizagem para conectar pesquisa climática a políticas, coalizões e ação institucional.",
-    aboutBody2: "Essa experiência me ensinou que evidência sozinha raramente muda a realidade. Ela precisa se tornar estratégia, instituições, urgência política e uma razão para as pessoas se moverem.",
+    aboutBody2: "Essa experiência me ensinou que pesquisa e evidência, sozinhas, raramente mudam a realidade. Elas precisam “aterrissar” no mundo real e mobilizar as pessoas certas para orientar estratégias, moldar instituições e destravar financiamento.",
     learnMore: "Saiba mais",
     aboutLong: [
       "Trabalho na interseção entre governança de IA, estratégia e mudança institucional.",
@@ -94,9 +94,9 @@ const copy = {
     nextBody: "Estou explorando como potências médias podem transformar seus ativos reais em influência sobre a ordem global da IA — e como mobilização pública, estratégia e novas instituições podem tornar essa agência duradoura.",
     available: "Aberto a colaborações, assessoria e consultoria",
     contactTitle: <>Se você trabalha com<br />algo disso, <em>vamos conversar.</em></>,
+    calendar: "Agendar conversa",
     email: "Me escreva",
     feedback: "Feedback anônimo",
-    footer: "São Paulo · trabalhando globalmente",
   },
 };
 
@@ -132,15 +132,23 @@ const education = {
   ],
 };
 
-export default function Home() {
+export function SiteHome({ palette, showCompare = true }: { palette?: "styleguide" | "proposed" | "proposed-white" | "styleguide-parchment"; showCompare?: boolean }) {
   const [lang, setLang] = useState<"en" | "pt">("en");
   const t = copy[lang];
   return (
-    <main>
+    <main className={palette ? `palette-${palette}` : undefined}>
+      {palette && showCompare && <a className="compare-switch" href="../">View original palette ↗</a>}
       <header className="site-header shell">
         <a className="wordmark" href="#top" aria-label="Ettore Arpini, home">Ettore Arpini<span>↗</span></a>
         <nav>{t.nav.map((item, i) => <a key={item} href={`#${["about", "projects", "writing", "contact"][i]}`}>{item}</a>)}</nav>
-        <button className="language" onClick={() => setLang(lang === "en" ? "pt" : "en")} aria-label="Switch language">{lang === "en" ? "PT" : "EN"}</button>
+        <div className="header-actions">
+          <div className="social-links" aria-label="Social links">
+            <a href="https://x.com/ettorearpini" target="_blank" rel="noreferrer" aria-label="Ettore Arpini on X">X</a>
+            <a href="https://www.linkedin.com/in/arpini" target="_blank" rel="noreferrer" aria-label="Ettore Arpini on LinkedIn">in</a>
+            <a href="https://arpini.substack.com" target="_blank" rel="noreferrer" aria-label="Where AI Lands on Substack">Substack</a>
+          </div>
+          <button className="language" onClick={() => setLang(lang === "en" ? "pt" : "en")} aria-label="Switch language">{lang === "en" ? "PT" : "EN"}</button>
+        </div>
       </header>
 
       <section className="hero shell" id="top">
@@ -193,10 +201,12 @@ export default function Home() {
       </section>
 
       <section className="contact dark" id="contact">
-        <div className="shell"><p className="section-number">04 / CONTACT</p><h2>{t.contactTitle}</h2><div className="contact-links"><a href="mailto:ettore.arpini@gmail.com">{t.email} <span>↗</span></a><a href="https://www.linkedin.com/in/arpini" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://www.admonymous.co/arpini" target="_blank" rel="noreferrer">{t.feedback} ↗</a></div></div>
+        <div className="shell"><p className="section-number">04 / CONTACT</p><h2>{t.contactTitle}</h2><div className="contact-links"><a href="https://calendar.app.google/AcWvu4dFP3UNBZir7" target="_blank" rel="noreferrer">{t.calendar} <span>↗</span></a><a href="mailto:ettore.arpini@gmail.com">{t.email} ↗</a><a href="https://www.linkedin.com/in/arpini" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://www.admonymous.co/arpini" target="_blank" rel="noreferrer">{t.feedback} ↗</a></div></div>
       </section>
 
-      <footer><div className="shell"><strong>Ettore Arpini</strong><span>{t.footer}</span><span>© 2026</span></div></footer>
+      <footer><div className="shell"><strong>Ettore Arpini</strong><span>© 2026</span></div></footer>
     </main>
   );
 }
+
+export default function Home() { return <SiteHome palette="styleguide-parchment" showCompare={false} />; }

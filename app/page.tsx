@@ -159,7 +159,7 @@ export default function Home() {
             <div className="about-story-copy compact-about">
               <p>{t.aboutBody1}</p>
               <p>{t.aboutBody2}</p>
-              <a className="light-link" href="/about">{t.learnMore} <span>→</span></a>
+              <a className="light-link" href="/about2">{t.learnMore} <span>→</span></a>
             </div>
           </div>
           <div className="current-agenda"><p className="section-number">{t.currentFocusLabel}</p><p>{t.currentFocus}</p></div>

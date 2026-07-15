@@ -4,7 +4,6 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Frontier AI Dependency Explorer</title>
-<link rel="stylesheet" href="brand.css" />
 <style>
 :root{--navy:#102f55;--blue:#2e74b5;--teal:#2e8b8b;--green:#1e6a48;--amber:#c8860d;--red:#b23a48;--purple:#7656a8;--ink:#17202a;--muted:#667085;--line:#dfe5ec;--bg:#f5f7fa;--panel:#fff}
 *{box-sizing:border-box} body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
@@ -28,76 +27,8 @@ select,input[type=search]{border:1px solid var(--line);border-radius:8px;padding
 
 .overview-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;margin:10px 0 0}.overview-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:0 2px 8px rgba(16,47,85,.05)}.overview-card h3{margin:0 0 6px;color:var(--navy);font-size:15px}.overview-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}.overview-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:10px 0 14px}.overview-kpi{background:#fff;border:1px solid var(--line);border-radius:11px;padding:11px}.overview-kpi b{display:block;color:var(--navy);font-size:20px}.overview-kpi span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.overview-svg{display:block;width:100%;height:720px;background:linear-gradient(180deg,#fff,#fbfcfe)}.ov-band{fill:#f8fafc;stroke:#dfe5ec}.ov-band-title{font-size:11px;font-weight:850;letter-spacing:.08em;fill:#667085}.ov-card{cursor:pointer}.ov-card rect{stroke:#fff;stroke-width:2}.ov-card text{font-size:9px;font-weight:750;fill:#fff;pointer-events:none}.ov-card .ov-sub{font-size:7.5px;font-weight:500;fill:#fff;opacity:.9}.ov-arrow{fill:none;stroke-width:1.7;stroke-opacity:.55;marker-end:url(#ovArrow)}.ov-label{font-size:9px;fill:#667085;font-weight:700}.ov-question{font-size:18px;font-weight:850;fill:#102f55}.ov-answer{font-size:10px;fill:#475467}.ov-power{fill:#fff;stroke:#dfe5ec}.ov-power-title{font-size:10px;font-weight:800;fill:#102f55}.ov-power-copy{font-size:8px;fill:#667085}.overview-note{padding:10px 12px;border-left:4px solid var(--amber);background:#fffaf0;border-radius:7px;font-size:12px;color:#475467;line-height:1.5;margin-top:12px}@media(max-width:980px){.overview-grid{grid-template-columns:1fr}.overview-kpis{grid-template-columns:repeat(2,1fr)}.overview-svg{height:620px}}
 </style>
-<style>
-:root{
-  --navy:var(--ea-ink);--blue:var(--ea-slate);--teal:var(--ea-slate);
-  --green:var(--ea-slate);--amber:var(--ea-gold);--red:var(--ea-clay);
-  --purple:var(--ea-clay);--ink:var(--ea-ink);--muted:var(--ea-gray);
-  --line:var(--ea-line);--bg:var(--ea-paper);--panel:var(--ea-paper)
-}
-body{background:var(--ea-bg);color:var(--ea-text);font-family:var(--ea-font-ui)}
-.ea-header{position:sticky;top:0;z-index:10;border-bottom:var(--ea-border-hair) solid var(--ea-line);background:var(--ea-paper)}
-.ea-header__inner{height:64px;display:flex;align-items:center;justify-content:space-between}
-.ea-wordmark{display:inline-flex;align-items:center;gap:var(--ea-space-3);font-family:var(--ea-font-display);font-weight:var(--ea-weight-heavy);font-size:var(--ea-size-h4);letter-spacing:var(--ea-tracking-head);color:var(--ea-ink);text-decoration:none}
-.ea-wordmark:hover{text-decoration:none}.ea-bar{width:34px;height:8px;background:var(--ea-clay)}
-.ea-nav{display:flex;gap:var(--ea-space-7);font-size:var(--ea-size-ui)}
-.ea-nav a{color:var(--ea-gray);text-decoration:none}.ea-nav a:hover{color:var(--ea-ink)}
-.ea-nav a[aria-current="page"]{color:var(--ea-ink);padding-bottom:var(--ea-space-1);box-shadow:inset 0 -2px 0 var(--ea-clay)}
-.app{grid-template-columns:minmax(0,1fr) 340px;min-height:auto;max-width:var(--ea-container);margin:0 auto;border-left:var(--ea-border-hair) solid var(--ea-line);border-right:var(--ea-border-hair) solid var(--ea-line)}
-.main{padding:var(--ea-space-8)}
-.side{background:var(--ea-paper-2);border-left:var(--ea-border-hair) solid var(--ea-line);padding:var(--ea-space-7);max-height:calc(100vh - 64px);top:64px}
-h1{font-family:var(--ea-font-display);font-size:clamp(40px,7vw,82px);line-height:var(--ea-leading-snug);letter-spacing:var(--ea-tracking-hero);color:var(--ea-ink);max-width:860px}
-.sub{font-family:var(--ea-font-serif);font-size:var(--ea-size-lead);line-height:var(--ea-leading-read);color:var(--ea-ink-2);max-width:var(--ea-measure)}
-.top{padding:var(--ea-space-8) 0 var(--ea-space-7);margin-bottom:0;border-bottom:var(--ea-border-rule) solid var(--ea-ink)}
-.metric{font-size:var(--ea-size-micro);letter-spacing:var(--ea-tracking-label);text-transform:uppercase;color:var(--ea-gray)}
-.metric b{font-family:var(--ea-font-display);font-size:var(--ea-size-h2);color:var(--ea-clay);letter-spacing:var(--ea-tracking-head)}
-.navtabs{gap:var(--ea-space-6);margin:0 0 var(--ea-space-8);padding:var(--ea-space-5) 0 0;border-bottom:var(--ea-border-hair) solid var(--ea-line);overflow:auto}
-.navtab{border:0;border-radius:0;background:transparent;color:var(--ea-gray);padding:0 0 var(--ea-space-3);font-family:var(--ea-font-ui);font-size:var(--ea-size-ui);font-weight:var(--ea-weight-semibold);white-space:nowrap}
-.navtab:hover{color:var(--ea-ink)}.navtab.on{background:transparent;border:0;color:var(--ea-ink);box-shadow:inset 0 -3px 0 var(--ea-clay)}
-.toolbar,.scenario-bar,.mini-toolbar{background:transparent;border:0;border-radius:0;padding:var(--ea-space-4) 0;margin:0;border-bottom:var(--ea-border-hair) solid var(--ea-line);box-shadow:none;gap:var(--ea-space-3)}
-.toolbar{border-top:var(--ea-border-hair) solid var(--ea-line)}
-.label,.type,.section h3,.ref-group h3,.overview-kpi span{font-size:var(--ea-size-micro);letter-spacing:var(--ea-tracking-label);font-weight:var(--ea-weight-semibold);color:var(--ea-gray)}
-.chip,.scenario{border:var(--ea-border-hair) solid var(--ea-line);background:var(--ea-paper);color:var(--ea-ink-2);border-radius:var(--ea-radius-sm);padding:var(--ea-space-2) var(--ea-space-3);font-family:var(--ea-font-ui);font-size:var(--ea-size-small);font-weight:var(--ea-weight-medium);transition:background var(--ea-dur) var(--ea-ease),color var(--ea-dur) var(--ea-ease)}
-.chip:hover,.scenario:hover{background:var(--ea-paper-2)}.chip.on,.scenario.on{background:var(--ea-clay);border-color:var(--ea-clay);color:var(--ea-paper)}
-select,input[type=search]{border:var(--ea-border-hair) solid var(--ea-line);border-radius:var(--ea-radius-sm);padding:var(--ea-space-2) var(--ea-space-3);background:var(--ea-paper);color:var(--ea-ink);font-family:var(--ea-font-ui);font-size:var(--ea-size-small)}
-.canvas-card,.references-card,.overview-card,.overview-kpi,.ref-group,.prov-box{background:transparent;border:0;border-radius:0;box-shadow:none}
-.canvas-card{border-top:var(--ea-border-rule) solid var(--ea-ink);border-bottom:var(--ea-border-hair) solid var(--ea-line)}
-#map,.alt-svg,.overview-svg{background:var(--ea-paper)}
-.legend,.view-legend{padding:var(--ea-space-4) 0;font-size:var(--ea-size-small);color:var(--ea-gray);border-top:var(--ea-border-hair) solid var(--ea-line)}
-.view-head{margin:0 0 var(--ea-space-7);padding-bottom:var(--ea-space-6);border-bottom:var(--ea-border-rule) solid var(--ea-ink)}
-.view-head h2,.references-card h2{font-family:var(--ea-font-display);font-size:clamp(27px,4vw,40px);color:var(--ea-ink)}
-.view-head p,.references-card .intro,.overview-card p{font-family:var(--ea-font-serif);font-size:var(--ea-size-body);line-height:var(--ea-leading-body);color:var(--ea-ink-2)}
-.overview-kpis{gap:0;border-top:var(--ea-border-hair) solid var(--ea-line);border-bottom:var(--ea-border-hair) solid var(--ea-line)}
-.overview-kpi{padding:var(--ea-space-5);border-right:var(--ea-border-hair) solid var(--ea-line)}
-.overview-kpi:last-child{border-right:0}.overview-kpi b{font-family:var(--ea-font-display);font-size:var(--ea-size-h2);color:var(--ea-clay)}
-.overview-grid{gap:var(--ea-space-8)}.overview-card{padding:var(--ea-space-6) 0;border-top:var(--ea-border-accent) solid var(--ea-slate)}
-.overview-card h3{font-family:var(--ea-font-display);font-size:var(--ea-size-h3);color:var(--ea-ink)}
-.overview-note,.method-box{padding:var(--ea-space-5) 0 var(--ea-space-5) var(--ea-space-6);border-left:var(--ea-border-quote) solid var(--ea-clay);background:transparent;border-radius:0;color:var(--ea-ink-2);font-family:var(--ea-font-serif);font-size:var(--ea-size-body);line-height:var(--ea-leading-body)}
-.scoregrid{gap:0;border-top:var(--ea-border-hair) solid var(--ea-line)}.score{border:0;border-bottom:var(--ea-border-hair) solid var(--ea-line);border-radius:0;padding:var(--ea-space-3) 0}.score b{font-family:var(--ea-font-display);color:var(--ea-clay)}
-.body,.empty{font-family:var(--ea-font-serif);font-size:var(--ea-size-body);line-height:var(--ea-leading-body);color:var(--ea-ink-2)}
-.side h2{font-family:var(--ea-font-display);font-size:var(--ea-size-h3);color:var(--ea-ink)}
-.dep{padding:var(--ea-space-3) 0 var(--ea-space-3) var(--ea-space-4);border-left:var(--ea-border-accent) solid var(--ea-slate);background:transparent;border-radius:0;font-size:var(--ea-size-small);line-height:var(--ea-leading-body)}
-.risk{border-left-color:var(--ea-clay)}.opp{border-left-color:var(--ea-slate)}
-.references-card{padding:0}.ref-grid{gap:var(--ea-space-7)}.ref-group{padding:var(--ea-space-5) 0;border-top:var(--ea-border-accent) solid var(--ea-slate)}
-.ref-list li{font-family:var(--ea-font-serif);font-size:var(--ea-size-small);line-height:var(--ea-leading-body);color:var(--ea-ink-2)}.ref-list a,.source a,.srcchips a{color:var(--ea-clay-ink)}
-.conn-table-wrap{border:var(--ea-border-hair) solid var(--ea-line);border-radius:0}.conn-table{font-size:var(--ea-size-small)}.conn-table th{background:var(--ea-ink);color:var(--ea-paper);font-weight:var(--ea-weight-semibold)}.conn-table tr:hover td{background:var(--ea-clay-soft)}
-.tooltip{background:var(--ea-ink);color:var(--ea-paper);border-radius:var(--ea-radius-sm);box-shadow:var(--ea-shadow-md)}
-.ea-footer{background:var(--ea-ink);color:var(--ea-paper);padding:var(--ea-space-10) 0}.ea-footer__inner{display:flex;justify-content:space-between;gap:var(--ea-space-7);align-items:flex-end}.ea-footer .ea-wordmark{color:var(--ea-paper)}.ea-footer .ea-bar{background:var(--ea-gold)}.ea-tagline{font-size:var(--ea-size-micro);letter-spacing:var(--ea-tracking-label);text-transform:uppercase;color:var(--ea-gray);margin:0}
-@media(max-width:980px){.app{border:0}.main{padding:var(--ea-space-6)}.side{top:0}.ea-header__inner{height:auto;min-height:64px;gap:var(--ea-space-4)}.ea-nav{gap:var(--ea-space-4)}.top{padding-top:var(--ea-space-7)}}
-@media(max-width:640px){.ea-header__inner,.ea-footer__inner{align-items:flex-start;flex-direction:column;padding-top:var(--ea-space-4);padding-bottom:var(--ea-space-4)}.main{padding:var(--ea-space-5) var(--ea-gutter-mobile)}.navtabs{gap:var(--ea-space-5)}.overview-kpi{border-right:0;border-bottom:var(--ea-border-hair) solid var(--ea-line)}}
-</style>
 </head>
 <body>
-<header class="ea-header">
-  <div class="ea-container ea-header__inner">
-    <a class="ea-wordmark" href="https://ettorearpini.com/">Ettore Arpini<span class="ea-bar"></span></a>
-    <nav class="ea-nav" aria-label="Main navigation">
-      <a href="https://ettorearpini.com/writing/">Writing</a>
-      <a href="https://ettorearpini.com/projects/" aria-current="page">Projects</a>
-      <a href="https://ettorearpini.com/about/">About</a>
-    </nav>
-  </div>
-</header>
 <div class="app"><main class="main">
 <div class="top"><div><h1>Frontier AI Dependency Explorer</h1><p class="sub">How frontier AI models are governed today—and where countries, institutions, firms, and infrastructure providers hold power over their development and deployment.</p></div><div class="metric"><b id="visibleCount">0</b>visible nodes</div></div>
 <div class="navtabs" role="tablist" aria-label="Resource views">
@@ -231,7 +162,6 @@ select,input[type=search]{border:var(--ea-border-hair) solid var(--ea-line);bord
 <div class="method-box"><b>Data vintage:</b> principally 2024–July 2026. <b>Independent review:</b> the report was treated as a hypothesis set and checked against OECD supply-chain mapping, official regulatory and alliance documents, institutional sources and recent bottleneck research. The map now distinguishes direct evidence, formal membership, regulatory reach and analytical inference. <b>Correction:</b> the January 2025 US AI Diffusion Rule was rescinded before compliance; the map therefore represents current BIS chip controls and licensing power rather than that superseded tier system.  Announced investments, planned gigawatts, ownership stakes, export-control rules and legislative status can change quickly. The map is designed as a strategic orientation tool rather than a definitive supply-chain model.</div>
 </div></div>
 </main><aside class="side" id="detail"><div class="empty"><h2>Read the map</h2>Click any country, resource, lab, institution, forum, agreement or policy. The panel will show its leverage, dependencies, coalition options and relevant links.<br><br><b>Start with a lens:</b> semiconductor chokepoints reveals the Netherlands–Germany–Taiwan–Korea–Japan chain; market access shows why India, Brazil, Indonesia and the EU can negotiate with labs even without frontier models.</div></aside></div>
-<footer class="ea-footer"><div class="ea-container ea-footer__inner"><a class="ea-wordmark" href="https://ettorearpini.com/">Ettore Arpini<span class="ea-bar"></span></a><p class="ea-tagline">Where transformative AI lands in the real world</p></div></footer>
 <div class="tooltip" id="tip"></div>
 <script>
 const C={country:'#2e74b5',pole:'#8b95a5',resource:'#1e6a48',lab:'#7656a8',institution:'#c8860d',policy:'#a44a62'};

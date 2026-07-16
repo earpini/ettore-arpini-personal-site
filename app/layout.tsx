@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   title: "Ettore Arpini — Making AI governance real",
   description: "Strategy, mobilization, and fieldbuilding for AI governance in middle power countries.",
   icons: {
-    icon: "/favicon.svg?v=20260715",
-    shortcut: "/favicon.svg?v=20260715",
+    icon: "/favicon.svg?v=20260716-ea",
+    shortcut: "/favicon.svg?v=20260716-ea",
   },
   metadataBase: new URL("https://ettorearpini.com"),
   openGraph: {

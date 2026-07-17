@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leverage Lab — a middle-power AI strategy game</title>
+  <meta name="description" content="You are the foreign-policy strategist of one middle power. Convert what you hold, pool it, and get a seat at the table before the window closes. Companion to the working paper Leverage outside the chain.">
+  <link rel="stylesheet" href="brand.css">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="container masthead-row">
+      <div>
+        <p class="eyebrow">A strategy game about AI power politics</p>
+        <h1 class="wordmark">Leverage Lab</h1>
+        <p class="sub">Pick a country and run its AI strategy, 2026–2033. Two superpowers are carving up the future of AI. Get your people a seat at the table — before you end up on the menu.</p>
+      </div>
+      <div class="run-controls">
+        <div>
+          <label for="scenario-select">World mood</label>
+          <select id="scenario-select"></select>
+        </div>
+        <div>
+          <label for="seed-input" title="Two players with the same code get the same game — share it to compete.">Game code</label>
+          <input id="seed-input" type="text" spellcheck="false" autocomplete="off">
+        </div>
+        <div>
+          <label>&nbsp;</label>
+          <button id="new-run" class="btn-quiet">New game</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="draft-strip">
+    <div class="container">
+      <strong>Draft — I want your feedback.</strong>
+      The goal of the game: build an alliance strong enough that your country gets a seat at the table — and real access to frontier AI — before the US and China carve everything up.
+      Play a round and tell me what's confusing, broken or great: <a href="https://www.admonymous.co/arpini" target="_blank" rel="noopener">leave feedback (anonymous, 1 minute)</a>.
+    </div>
+  </div>
+
+  <main id="app" aria-live="polite"></main>
+
+  <details class="model container">
+    <summary>Curious how the game works under the hood?</summary>
+    <div class="grid">
+      <div class="cell"><strong>It's based on real research</strong>This game is the working paper <a href="https://earpini.github.io/brazil-ai-analysis">Leverage outside the chain</a> turned playable. Every country's scores come from a companion assessment, <a href="docs/the-map-of-leverage.pdf">The map of leverage</a> (PDF) — explore its data in <a href="docs/leverage-matrix-reference.html">the interactive matrix</a>.</div>
+      <div class="cell"><strong>Why some allies count more</strong>Countries like Taiwan or the Netherlands sit on bottlenecks the whole AI industry depends on (chip factories, chip-making machines) — they add full value the day they join. Countries like Brazil or Indonesia hold raw potential that only counts once terms are set on it.</div>
+      <div class="cell"><strong>Why your allies keep getting offers</strong>The stronger your alliance, the harder the superpowers work to break it. The research calls this the accommodation trap, and in this game it is your real opponent.</div>
+      <div class="cell"><strong>What the line means</strong>You get a seat when going around your alliance costs the superpowers more than negotiating with it. Faster AI raises that bar; a minerals boom lowers it.</div>
+      <div class="cell"><strong>Honest numbers</strong>Every number in the game lives in <a href="data/params.json">one open file</a>, each with a written justification in <a href="docs/model-notes.md">the model notes</a>. Disagree with a number? Change it and see.</div>
+      <div class="cell"><strong>Fair replays</strong>The game code in the URL fixes every random event. Same code, same game — share it and compete on equal terms.</div>
+    </div>
+  </details>
+
+  <footer class="site container">
+    <span>A game by Ettore Arpini · based on the working paper <a href="https://earpini.github.io/brazil-ai-analysis">Leverage outside the chain</a> · <a href="https://www.admonymous.co/arpini" target="_blank" rel="noopener">give feedback</a></span>
+    <span>Country data 2024–26 · the events are fictional, the laws they mention are real</span>
+  </footer>
+
+  <noscript>
+    <p class="noscript">This game needs JavaScript — it is one page, no tracking, no build.</p>
+  </noscript>
+  <script>
+    // Chrome blocks ES-module imports on file:// pages. Fail politely.
+    window.addEventListener('error', function (e) {
+      if (location.protocol === 'file:' && !window.__booted && !document.getElementById('file-note')) {
+        var p = document.createElement('p');
+        p.className = 'module-error';
+        p.id = 'file-note';
+        p.innerHTML = 'Your browser will not load ES modules from file:// (Safari will). Run <code>python3 -m http.server 8080</code> in this folder and open <code>http://localhost:8080</code>.';
+        document.getElementById('app').appendChild(p);
+      }
+    }, true);
+  </script>
+  <script type="module">
+    import './ui/main.js';
+    window.__booted = true;
+  </script>
+</body>
+</html>

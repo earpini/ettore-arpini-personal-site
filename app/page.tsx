@@ -178,7 +178,7 @@ export function SiteHome({ palette, showCompare = true }: { palette?: "styleguid
       <section className="projects" id="projects">
         <div className="shell projects-grid"><div><p className="section-number">02 / {t.projectsLabel}</p><h2>{t.projectsTitle}</h2><p>{t.projectsBody}</p></div>
           <div className="project-stack">
-            <a href="https://earpini.github.io/leverage-lab/" target="_blank" rel="noreferrer" className="project-card orange"><span>01 · Browser game</span><h3>Leverage<br />Lab</h3><p>An interactive simulation of how middle-power countries build leverage in the global AI order.</p><b>↗</b></a>
+            <a href="/leverage-lab/" className="project-card orange"><span>01 · Browser game</span><h3>Leverage<br />Lab</h3><p>An interactive simulation of how middle-power countries build leverage in the global AI order.</p><b>↗</b></a>
             <a href="https://ettorearpini.com/frontier-ai-dependency-explorer/" target="_blank" rel="noreferrer" className="project-card cream"><span>02 · Interactive explorer</span><h3>AI Frontier<br />Dependency Explorer</h3><p>An interactive explorer of the minerals, compute, energy, and capital behind frontier AI.</p><b>↗</b></a>
           </div>
         </div>

@@ -1,0 +1,314 @@
+{
+  "_meta": {
+    "note": "Every tunable coefficient in the game lives here. One-line rationale for each in docs/model-notes.md. Nothing numeric is hard-coded in engine/.",
+    "vintage": "Jul 2026"
+  },
+  "game": {
+    "turns": 8,
+    "startYear": 2026,
+    "apPerTurn": 2,
+    "playerCode": "BR"
+  },
+  "criteriaStart": {
+    "c3": 10,
+    "c4": 25,
+    "c5": 60,
+    "c6": 70,
+    "c7": 10
+  },
+  "criteria": {
+    "c1Base": 8,
+    "c1PerConvertedPoint": 4.5,
+    "c1SpikeFactor": 4.5,
+    "c2TrustWeight": 0.55,
+    "c2PerMember": 7,
+    "c2DefRiskWeight": 0.15,
+    "c3DecayPerTurn": 2,
+    "c4DecayPerTurn": 1,
+    "c7DecayPerTurn": 0.5,
+    "c5IncoherenceThreshold": 40,
+    "c5IncoherenceTrustCost": 2,
+    "c6BreachLine": 30,
+    "c3SpiralLine": 90,
+    "tierDC6CostPerTurn": 1.5,
+    "tierDC5CostPerTurn": 1
+  },
+  "trust": {
+    "start": 40,
+    "fundedGain": 3,
+    "unfundedDecay": 4,
+    "defectionCost": 8,
+    "recruitGain": 2
+  },
+  "conversion": {
+    "topAxes": 3,
+    "positionalPreconverted": 1,
+    "positionalStartHeat": 8
+  },
+  "latecomer": {
+    "clubMembers": [
+      "IN",
+      "ID",
+      "ZA"
+    ],
+    "clubSubstitutes": [
+      "CA",
+      "SG",
+      "NO"
+    ],
+    "entryBar": 4,
+    "joinAp": 1,
+    "joinTrustGain": 4,
+    "outsideProtection": 0.2
+  },
+  "concentration": {
+    "start": 50,
+    "growthBase": 3.5,
+    "paceWeight": 4,
+    "ratioRelief": 8,
+    "c7Relief": 0.06,
+    "defectionBoost": 4,
+    "soloBoost": 1.5,
+    "cutoffLine": 82,
+    "protectRatioWeight": 0.6,
+    "protectC7Weight": 0.4,
+    "cutoffC7Loss": 8,
+    "cutoffC6Loss": 4,
+    "cutoffEconomyHit": 30,
+    "cutoffPeopleHit": 15,
+    "gripEconomyPenalty": 20,
+    "gripPeoplePenalty": 10,
+    "gripFreeBand": 40,
+    "gripNaturePressure": 1.2,
+    "juniorTermsPenalty": 0.3
+  },
+  "outcomes": {
+    "natureDriftBase": 0.5,
+    "natureDriftDemand": 1.5,
+    "m1NatureGain": 2,
+    "natureTrustLine": 25,
+    "natureTrustCost": 2,
+    "people": {
+      "c6": 0.45,
+      "c5": 0.2,
+      "c4": 0.2
+    },
+    "economy": {
+      "c1": 0.3,
+      "ratio": 20,
+      "c7": 0.25
+    },
+    "frontier": {
+      "partialRatio": 0.6
+    },
+    "fallbackBaseline": {
+      "people": 60,
+      "economy": 55,
+      "nature": 60
+    }
+  },
+  "pool": {
+    "memberFactor": 0.45,
+    "positionalFactor": 1,
+    "positionalCountries": [
+      "TW",
+      "NL",
+      "KR"
+    ],
+    "polePowerBase": 0.8,
+    "polePowerConcWeight": 0.6
+  },
+  "chokepoint": {
+    "paceWeight": 8,
+    "demandWeight": -4,
+    "floor": 12
+  },
+  "instruments": {
+    "m1": {
+      "ap": 1,
+      "convertShare": 0.25,
+      "c4": 6,
+      "c3": 3,
+      "govFactorBase": 0.9,
+      "govFactorPerLevel": 0.05
+    },
+    "m2": {
+      "apBase": 1,
+      "apSurcharge": 1,
+      "apCap": 2,
+      "surchargeTiers": [
+        "C",
+        "D"
+      ],
+      "surchargeRegimeDistance": 2,
+      "defRiskBase": 20,
+      "defRiskPerAffinity": 7,
+      "defRiskAnchorRelief": 4,
+      "defRiskPositionalPenalty": 6
+    },
+    "m3": {
+      "apFirst": 2,
+      "ap": 1,
+      "memberCostDivisor": 5,
+      "reliefBase": 7,
+      "reliefPerStreak": 1.5,
+      "c5Gain": 2,
+      "unfundedDefRiskDrift": 3
+    },
+    "m4": {
+      "ap": 1,
+      "spikePoints": 2.5,
+      "spikeDecay": 0.5,
+      "c3": 12,
+      "gateC5": 70,
+      "gateGov": 3
+    },
+    "m5": {
+      "ap": 1,
+      "c1Flat": 3,
+      "diminish": 0.8,
+      "c3Relief": 2,
+      "trustCost": 3,
+      "c5Cost": 2
+    },
+    "m7": {
+      "ap": 1,
+      "c5Gain": 2,
+      "investmentsPerLevel": 2,
+      "c6GainOnLevel": 2,
+      "maxGov": 3
+    },
+    "m6": {
+      "ap": 1,
+      "factorBonusCap": 0.2,
+      "tiers": [
+        {
+          "c7": 7,
+          "structuralRelief": 3,
+          "factorBonus": 0.04,
+          "c4": 2,
+          "c6": 1
+        },
+        {
+          "c7": 6,
+          "structuralRelief": 3,
+          "factorBonus": 0.08,
+          "c4": 2,
+          "c6": 1
+        },
+        {
+          "c7": 5,
+          "structuralRelief": 5,
+          "factorBonus": 0.04,
+          "c4": 1,
+          "c6": 1
+        }
+      ]
+    }
+  },
+  "poles": {
+    "pressureBase": 4,
+    "pressureRivalryWeight": 6,
+    "pressurePooledWeight": 0.18,
+    "courtTurns": {
+      "us": [
+        3,
+        6
+      ],
+      "cn": [
+        2,
+        5,
+        7
+      ]
+    },
+    "declineC3Cost": 2,
+    "autoDeclineC3Cost": 2,
+    "coercion": {
+      "gripLine": 55,
+      "c4Base": 2,
+      "gripScale": 3,
+      "c1FlatLine": 70,
+      "c1FlatHit": 1
+    }
+  },
+  "defection": {
+    "rollLine": 60,
+    "chancePerPoint": 1.8,
+    "chanceCap": 70,
+    "affinityWeight": 3,
+    "rivalryWeight": 8,
+    "c7Relief": 0.25,
+    "fundedRelief": 10,
+    "defRiskFloor": 5,
+    "defRiskCap": 95
+  },
+  "wants": {
+    "axisMax": 1,
+    "maxWants": 2,
+    "priority": ["compute", "models", "capital", "market", "gov_conv"],
+    "recruitDiscount": 1,
+    "defRiskReliefPerMet": 6,
+    "yearlyAllMet": -4,
+    "yearlySomeMet": -2,
+    "yearlyNoneMet": 2
+  },
+  "chain": {
+    "memberAxisMin": 2,
+    "playerConvertMin": 0.5
+  },
+  "signature": {
+    "ap": 1,
+    "usesPerGame": 1,
+    "overrides": { "IN": "market", "BR": "compute" },
+    "archetypes": {
+      "fab": { "tempSpike": 3, "concentration": -4, "c3": 8 },
+      "equip": { "tempSpike": 2, "concentration": -6, "c3": 8 },
+      "minerals": { "c1Flat": 4, "demand": 0.08, "c3": 5, "nature": 2 },
+      "compute": { "c1Flat": 3, "c4": 8, "c3": 3, "nature": -2 },
+      "capital": { "concentration": -5, "c6": 4, "c3": 4 },
+      "models": { "c7": 8, "trust": 6 },
+      "market": { "c1Flat": 4, "c4": 6, "c3": 6 },
+      "gov_conv": { "trust": 8, "c5": 4, "concentration": -3, "recruitDiscount": 1 }
+    }
+  },
+  "regimeDistance": {
+    "Full": 0,
+    "Flawed": 1,
+    "Hybrid": 2,
+    "Authoritarian": 3
+  },
+  "endings": {
+    "seat": {
+      "base": 75,
+      "c7Weight": 0.1,
+      "c6Weight": 0.05,
+      "minMembers": 3,
+      "minC2": 50,
+      "minC6": 45
+    },
+    "broker": {
+      "base": 45,
+      "ratioWeight": 10,
+      "minRatio": 0.6,
+      "minMembers": 1,
+      "minC2": 35
+    },
+    "junior": {
+      "base": 25,
+      "termsC1": 0.22,
+      "termsC4": 0.18,
+      "termsC2": 0.08,
+      "termsCap": 40
+    },
+    "menu": {
+      "base": 10,
+      "c1Weight": 0.08
+    },
+    "integritySpiral": {
+      "score": 8
+    },
+    "retaliationSpiral": {
+      "score": 9
+    }
+  }
+}

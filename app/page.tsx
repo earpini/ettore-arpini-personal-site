@@ -180,7 +180,7 @@ export function SiteHome({ palette, showCompare = true }: { palette?: "styleguid
           <div className="project-stack">
             <a href="/leverage-lab/" className="project-card orange"><span>01 · Browser game</span><h3>Leverage<br />Lab</h3><p>An interactive simulation of how middle-power countries build leverage in the global AI order.</p><b>↗</b></a>
             <a href="https://ettorearpini.com/frontier-ai-dependency-explorer/" target="_blank" rel="noreferrer" className="project-card cream"><span>02 · Interactive explorer</span><h3>AI Frontier<br />Dependency Explorer</h3><p>An interactive explorer of the minerals, compute, energy, and capital behind frontier AI.</p><b>↗</b></a>
-            <a href="https://earpini.github.io/ai-governance-assessment-framework-chatgpt-conversation/brand.html" target="_blank" rel="noreferrer" className="project-card orange"><span>03 · Proof of concept</span><h3>AI Governance<br />Capacity Signals</h3><p>A public prototype asking which few signals should guide investments in AI-governance fieldbuilding and policy capacity.</p><b>↗</b></a>
+            <a href="https://earpini.github.io/ai-governance-assessment-framework-chatgpt-conversation/brand.html" target="_blank" rel="noreferrer" className="project-card orange"><span>03 · Proof of concept</span><h3>AI Policy Windows<br />Explorer</h3><p>A public prototype for prioritizing talent pipelines, policymaker capacity, and media momentum in AI governance.</p><b>↗</b></a>
           </div>
         </div>
       </section>

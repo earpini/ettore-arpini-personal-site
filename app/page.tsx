@@ -101,6 +101,7 @@ const copy = {
 };
 
 const publications = [
+  ["AI Safety Needs an Adaptation Strategy", "Where AI Lands · 2026", "https://arpini.substack.com/p/ai-safety-needs-an-adaptation-strategy"],
   ["Leverage, Not Frontier: Brazil in the Global AI Order", "Working paper · 2026", "https://ettorearpini.com/brazil-ai-analysis/"],
   ["WRI Brasil 2023–2027 Impact Strategy", "WRI Brasil · 2025", "https://files.wri.org/d8/s3fs-public/2025-11/wri-brasil-2023-27-strategy.pdf"],
   ["Urban Commons as a Driver of Social Inclusion", "TU Delft · 2022", "https://resolver.tudelft.nl/uuid:b57017ef-79a1-4af7-ac52-201af5988259"],

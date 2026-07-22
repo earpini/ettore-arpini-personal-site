@@ -1,4 +1,7 @@
 import styles from "./style-test.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { robots: { index: false, follow: false } };
 
 const writing = [
   ["2026", "Where AI Lands", "Where transformative AI lands in the real world — and how to make its consequences concrete enough for people and policymakers to act.", "https://arpini.substack.com"],
